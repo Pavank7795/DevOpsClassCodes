@@ -28,5 +28,8 @@ pipeline{
                 sh 'mvn package'
             }
         }
+        stage('deploy'){
+            steps{
+                sh 'sudo scp -o /var/lib/jenkins/workspace/piprline_job1/target/addressbook.war /opt/apache-tomcat-8.5.100/webapps/
     }
 }
